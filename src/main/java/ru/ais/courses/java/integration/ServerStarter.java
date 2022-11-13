@@ -1,13 +1,15 @@
 package ru.ais.courses.java.integration;
 
 import javax.xml.ws.Endpoint;
-import lombok.val;
+import lombok.experimental.UtilityClass;
 
+@UtilityClass
 public class ServerStarter {
 
-  public static void main(String... __) {
-    val url = "http://localhost:1212/hello";
-    Endpoint.publish(url, new Hello());
-    System.out.printf("Service started @ %s%n", url);
+  private final String URL = "http://localhost:1212/hello";
+
+  public void main(String... __) {
+    Endpoint.publish(URL, new Hello());
+    System.out.printf("Service started @ %s%n", URL);
   }
 }

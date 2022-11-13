@@ -25,7 +25,7 @@
     <rule groupId="com.sun.xml.ws"
           artifactId="rt" comparisonMethod="maven">
       <ignoreVersions>
-        <ignoreVersion type="regex">3.*</ignoreVersion>
+        <ignoreVersion type="regex">[34].*</ignoreVersion>
       </ignoreVersions>
     </rule>
 
